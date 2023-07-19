@@ -1,4 +1,4 @@
-//frequency in sorted arrays
+//stock buy and sell
 #include <iostream>
 using namespace std;
 
