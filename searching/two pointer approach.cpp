@@ -9,7 +9,7 @@ void Findpair(int arr[],int size,int x){
     int i=0;
     int j=size-1;
     int flag=1;
-    while(i<=j){
+    while(i<j){
         if((arr[i]+arr[j])==x){
             cout<<"The sum exists"<<endl;
             flag=0;
