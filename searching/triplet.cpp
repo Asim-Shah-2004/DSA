@@ -3,8 +3,8 @@
 #include <cmath>
 using namespace std;
 //x = given sum
-int Findpair(int arr[],int size,int x){
-    int i=0;
+int Findpair(int arr[],int size,int x,int si){
+    int i=si;
     int j=size-1;
     int flag=1;
     while(i<=j){
@@ -23,7 +23,7 @@ int Findpair(int arr[],int size,int x){
 void findTriplet(int arr[],int size,int x){
     int flag=0;
     for(int i=0;i<size-2;i++){
-        if(Findpair(arr,size,x-arr[i])){
+        if(Findpair(arr,size,x-arr[i],i+1)){
             cout<<"Triplet found"<<endl;
             flag=1;
             break;
