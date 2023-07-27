@@ -10,24 +10,16 @@ using namespace std;
 
 //sorting two sorted arrays
 void merge_sort(int arr1[],int size1,int arr2[],int size2){
-
-    int n = size1+size2;
-    int sort[n];
     int i=0;
     int j =0;
-    for(int k=0;k<n;k++){
+    for(int k=0;k<(size1+size2);k++){
         if(arr1[i]>=arr2[j]){
-            sort[k] = arr2[j];
+            cout<<arr2[j]<<" ";
             j++;
         }else{
-            sort[k] = arr1[i];
+            cout<<arr1[i]<<" ";
             i++;
         }
-    }
-
-    //printing elements
-    for(int k=0;k<n;k++){   
-        cout<<sort[k]<<" ";
     }
 }
 
