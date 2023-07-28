@@ -7,10 +7,10 @@ void merge(int a[],int n1,int b[],int n2){
     int i=0;
     int j=0;
     while(i<n1 && j<n2){
-        if(a[i]==a[i+1]){
+        if(i>0&&a[i]==a[i-1]){
             i++;
             continue;
-        }else if(b[j]==b[j+1]){
+        }else if(j>0&&b[j]==b[j-1]){
             j++;
             continue;
         }else if(a[i]<b[j]){
@@ -27,7 +27,7 @@ void merge(int a[],int n1,int b[],int n2){
     }
 
     while(i<n1){
-        if(a[i]==a[i+1]){
+        if(i>0&&a[i]==a[i-1]){
             i++;
             continue;
         }
@@ -36,7 +36,7 @@ void merge(int a[],int n1,int b[],int n2){
     }
 
     while(j<n2){
-        if(b[j]==b[j+1]){
+        if(j>0&&b[j]==b[j-1]){
             j++;
             continue;
         }
