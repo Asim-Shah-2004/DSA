@@ -1,4 +1,5 @@
 //use modification of lamuto partition
+//you can use hoares partition also
 #include <iostream>
 using namespace std;
 
