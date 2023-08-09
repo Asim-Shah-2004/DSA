@@ -29,6 +29,12 @@ void insertAtTail(node* &head,int data){
 }
 
 void delete_at_head(node* &head){
+    if(head==NULL){
+        return;
+    }else if(head->next==NULL){
+        head=NULL;
+        return;
+    }
     node* temp = head;
     head=head->next;
     head->prev=NULL;
@@ -36,6 +42,9 @@ void delete_at_head(node* &head){
 }
 
 void display(node* &head){
+    if(head==NULL){
+        return;
+    }
     node* temp = head;
     while(temp!=NULL){
         cout<<temp->data<<" ";
@@ -46,7 +55,7 @@ void display(node* &head){
 
 int main(){
     node* head = NULL;
-    for(int i=1;i<=10;i++){
+    for(int i=0;i<=10;i++){
         insertAtTail(head,i);
     }
     display(head);
