@@ -17,7 +17,7 @@ public:
 Node *prev_=NULL;
 Node* convert(Node* root){
     if(root==NULL){
-        return NULL;
+        return root;
     }
     Node* head = convert(root->left);
     if(prev_==NULL){
