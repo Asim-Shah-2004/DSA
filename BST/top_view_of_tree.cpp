@@ -12,7 +12,7 @@ struct Node
   }
 };
 
-void vTraversal(Node *root){
+void Top_view(Node *root){
     map<int,int> mp;
     queue<pair<Node*,int>> q;
     q.push({root,0});
@@ -38,13 +38,13 @@ void vTraversal(Node *root){
 
 int main() {
 	
-	Node *root = new Node(10);  
+    Node *root = new Node(10);  
     root->left = new Node(20);  
     root->right = new Node(30);  
     root->left->left = new Node(40);
     root->left->right = new Node(50);
     
-    vTraversal(root);
+    Top_view(root);
           
     return 0;  
 	
